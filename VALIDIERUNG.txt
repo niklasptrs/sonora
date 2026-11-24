@@ -1,0 +1,23 @@
+Sonora 0.4.0 – Validierung am 22.11.2026
+
+93 Unit-/GTK-Prüfungen ausgeführt: 92 erfolgreich, 1 optionaler Test übersprungen
+(python3-websocket ist in der Prüfmaschine nicht installiert).
+Native X11-Abnahme erfolgreich: getrennte aktive GTK-Anwendung, normale Fenster,
+Maximierung, Vollbild, Desktop anzeigen, Moduswechsel, Aus-/Einblenden, Neuerzeugen
+und Tastaturfokus verbleibt bei der aktiven Anwendung.
+Grafischer Smoke-Test erfolgreich: alle Renderer/Dichten, Lyrics, Profile,
+Autostart, Uhren, Widgets und Speicherbereinigung.
+UI-Regression erfolgreich: transparente Pixel, Einstellungsabgleich,
+Dashboard schließen/öffnen und Widget-Lebenszyklus.
+Single-Instance-Test erfolgreich: Befehlsweiterleitung und sauberes Beenden.
+Python-Kompilierung und Shell-Syntaxprüfung erfolgreich.
+
+Prüfumgebung: Linux/X11, Xvfb 1440x1000, Openbox, xcompmgr, GTK 3.
+Screenshots verwenden ausdrücklich synthetisches Demo-Audio.
+Physische Audiogeräte, Spotify-Anmeldung und Wayland-Overlay nicht praktisch
+geprüft. Die Windows-EXE wurde nur statisch untersucht, nicht ausgeführt.
+Das Debian-Paket wurde gebaut, entpackt und sein Startskript geprüft;
+eine systemweite Installation wurde nicht vorgenommen.
+
+Vollständige Weyv-Funktions- und Pixelgleichheit ist nicht hergestellt.
+Siehe WEYV-VERGLEICH.md für nachgewiesene Optionen und verbleibende Unterschiede.
