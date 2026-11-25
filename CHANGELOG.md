@@ -1,5 +1,9 @@
 # Änderungen
 
+## 0.7.1
+
+- Spread live frequency bands around the full Orbit ring for a more balanced response.
+
 ## 0.7.0
 
 - Set up Spotify Soloist from Connections, including download, key storage through Soloist, local playback and optional automatic reconnection.

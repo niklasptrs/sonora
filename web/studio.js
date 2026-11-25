@@ -126,8 +126,15 @@ function draw(g,w,h,style,colors,t,mini=false){
     g.shadowColor=colors[1];g.shadowBlur=mini?0:6;
     g.beginPath();
     for(let j=0;j<n;j++){
-      const a=j/n*tau+t*.045, k=Math.min(95,Math.floor(Math.abs(j/n*2-1)*95));
-      const start=r*(1+.022*Math.sin(a*5+t*.25)), end=start+r*(.055+.78*v(k));
+      const a=j/n*tau+t*.045;
+      // Spread nearby low-frequency bands around the full circle while
+      // keeping each band's bars grouped into small, readable clusters.
+      const position=j/n*96;
+      const band=Math.floor(position), within=position-band;
+      const k=(band*37)%96;
+      const next=(k+37)%96;
+      const level=v(k)*(1-within)+v(next)*within;
+      const start=r*(1+.022*Math.sin(a*5+t*.25)), end=start+r*(.055+.78*level);
       g.moveTo(cx+Math.cos(a)*start,cy+Math.sin(a)*start);
       g.lineTo(cx+Math.cos(a)*end,cy+Math.sin(a)*end);
     }
